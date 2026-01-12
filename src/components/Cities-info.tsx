@@ -83,7 +83,7 @@ const CitiesInfo: React.FC<WeatherDataProps> = ({ weatherData, locationName }) =
         <div className="text-center">
           <div className="mt-0">
             <h2 className="text-xl font-bold text-white mb-1">
-              {locationName || 'Berlin, Germany'}
+              {locationName || 'Banjul, The Gambia'}
             </h2>
             <p className="text-xs text-gray-300">
               {new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric', year: 'numeric' })}

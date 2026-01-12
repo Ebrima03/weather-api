@@ -12,9 +12,9 @@ interface Location {
 
 function App() {
   const [location, setLocation] = useState<Location>({
-    latitude: 52.52,
-    longitude: 13.41,
-    name: 'Berlin, Germany'
+    latitude: 13.4549,
+    longitude: -16.5790,
+    name: 'Banjul, The Gambia'
   });
 
   const handleLocationSelect = (latitude: number, longitude: number, name: string) => {
@@ -25,7 +25,7 @@ function App() {
   return (
     <UnitsProvider>
       <div 
-        className="" 
+        className="h-screen w-screen" 
         style={{ backgroundColor: 'hsl(243, 96%, 9%)' }}
       >
         <Header />
