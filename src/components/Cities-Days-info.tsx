@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Cloud, CloudRain, Sun, Wind, CloudSnow, CloudDrizzle, CloudFog } from 'lucide-react';
+import { Cloud, CloudRain, Sun, CloudSnow, CloudDrizzle, CloudFog } from 'lucide-react';
 import { useUnits } from '../hooks/Unite-Content';
 import {
   Select,
