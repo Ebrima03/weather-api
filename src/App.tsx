@@ -25,7 +25,7 @@ function App() {
   return (
     <UnitsProvider>
       <div 
-        className="h-screen w-screen" 
+        className="min-h-screen w-full" 
         style={{ backgroundColor: 'hsl(243, 96%, 9%)' }}
       >
         <Header />
