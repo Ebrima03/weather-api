@@ -108,9 +108,8 @@ const CitiesDaysInfo: React.FC<WeatherDataProps> = ({ weatherData }) => {
           {/* Day Selector */}
           <Select defaultValue="0" onValueChange={(value) => setSelectedDay(parseInt(value))}>
             <SelectTrigger 
-              className="w-full sm:w-32 text-sm sm:text-base transition-colors duration-200 hover:bg-[hsl(243,23%,25%)]"
+              className="w-full sm:w-32 text-sm sm:text-base transition-colors duration-200 hover:bg-[hsl(243,23%,25%)] sm:bg-[hsl(243,23%,30%)] bg-[hsl(243,23%,22%)]"
               style={{ 
-                backgroundColor: 'hsl(243, 23%, 30%)', 
                 color: 'hsl(0, 0%, 100%)',
                 border: 'none'
               }}>
@@ -124,12 +123,26 @@ const CitiesDaysInfo: React.FC<WeatherDataProps> = ({ weatherData }) => {
               }}>
               {[0, 1, 2, 3, 4, 5, 6].map((dayIndex) => (
                 <SelectItem
-                  key={dayIndex}
-                  value={dayIndex.toString()}
-                  className="rounded-sm cursor-pointer transition-transform duration-200 ease-in-out hover:bg-gradient-to-r hover:from-[hsl(243,23%,50%)] hover:to-[hsl(243,23%,38%)] hover:text-[hsl(0,0%,100%)] hover:shadow-lg hover:pl-4 hover:-translate-x-0.5 active:scale-99"
-                  style={{ color: 'hsl(0, 0%, 100%)' }}>
-                  {getDayName(dayIndex)}
-                </SelectItem>
+  key={dayIndex}
+  value={dayIndex.toString()}
+  className="
+    rounded-sm cursor-pointer
+    transition-all duration-200 ease-in-out
+    text-white
+
+    hover:bg-[hsl(243,23%,35%)]
+    data-[highlighted]:bg-[hsl(243,23%,32%)]
+    data-[state=checked]:bg-[hsl(243,23%,30%)]
+
+    active:bg-[hsl(243,23%,28%)]
+    focus:bg-[hsl(243,23%,32%)]
+
+    hover:pl-4 hover:-translate-x-0.5
+  "
+>
+  {getDayName(dayIndex)}
+</SelectItem>
+
               ))}
             </SelectContent>
           </Select>

@@ -108,7 +108,7 @@ const Hero: React.FC<HeroProps> = ({ onLocationSelect }) => {
                 }}
                 onFocus={() => searchQuery && setShowDropdown(true)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-                className="w-full pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-4 rounded-lg text-sm sm:text-base focus:outline-none"
+                className="w-full pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-4 rounded-lg text-sm sm:text-base focus:outline-none transition-all duration-200 hover:bg-[hsl(243,27%,24%)] focus:bg-[hsl(243,27%,24%)] focus:ring-2 focus:ring-[hsl(233,67%,56%)] focus:ring-offset-0"
                 style={{ 
                   backgroundColor: 'hsl(243, 27%, 20%)', 
                   color: 'hsl(0, 0%, 100%)',
@@ -129,7 +129,7 @@ const Hero: React.FC<HeroProps> = ({ onLocationSelect }) => {
                     searchResults.map((result, index) => (
                       <div
                         key={index}
-                        className="px-3 sm:px-4 py-2 sm:py-3 cursor-pointer transition-colors hover:bg-white/5"
+                        className="px-3 sm:px-4 py-2 sm:py-3 cursor-pointer transition-all duration-200 hover:bg-[hsl(243,23%,28%)] hover:pl-4 sm:hover:pl-5 active:scale-98"
                         style={{ 
                           color: 'hsl(0, 0%, 100%)',
                           borderBottom: index < searchResults.length - 1 ? '1px solid hsl(243, 23%, 30%)' : 'none'
@@ -156,7 +156,7 @@ const Hero: React.FC<HeroProps> = ({ onLocationSelect }) => {
             {/* Search Button */}
             <button 
               onClick={handleSearch}
-              className="px-4 sm:px-8 py-3 sm:py-4 rounded-lg font-medium text-sm sm:text-base transition-opacity hover:opacity-90 whitespace-nowrap"
+              className="px-4 sm:px-8 py-3 sm:py-4 rounded-lg font-medium text-sm sm:text-base transition-all duration-200 hover:bg-[hsl(233,67%,62%)] hover:shadow-lg hover:shadow-[hsl(233,67%,56%)/30] active:scale-95 active:shadow-md"
               style={{ 
                 backgroundColor: 'hsl(233, 67%, 56%)', 
                 color: 'hsl(0, 0%, 100%)' 
