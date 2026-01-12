@@ -108,7 +108,21 @@ const Hero: React.FC<HeroProps> = ({ onLocationSelect }) => {
                 }}
                 onFocus={() => searchQuery && setShowDropdown(true)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-                className="w-full pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-4 rounded-lg text-sm sm:text-base focus:outline-none transition-all duration-200 hover:bg-[hsl(243,27%,24%)] focus:bg-[hsl(243,27%,24%)] focus:ring-2 focus:ring-[hsl(233,67%,56%)] focus:ring-offset-0"
+                className="
+  w-full
+  pl-10 sm:pl-12
+  pr-3 sm:pr-4
+  py-3 sm:py-4
+  rounded-lg
+  text-base sm:text-base
+  focus:outline-none
+  transition-all duration-200
+  hover:bg-[hsl(243,27%,24%)]
+  focus:bg-[hsl(243,27%,24%)]
+  focus:ring-2 focus:ring-[hsl(233,67%,56%)]
+  focus:ring-offset-0
+"
+
                 style={{ 
                   backgroundColor: 'hsl(243, 27%, 20%)', 
                   color: 'hsl(0, 0%, 100%)',
